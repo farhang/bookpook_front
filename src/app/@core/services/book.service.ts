@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { environment } from '../../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -8,7 +9,7 @@ import { Observable } from 'rxjs';
 export class BookService {
 
   constructor(private http: HttpClient) { }
-  baseURl = 'http://localhost:3000/'
+  baseURl = environment.API_URL;
 
   getBooksByTitle(keyword: string = ''): Observable<any> {
     return this.http.get(this.baseURl + 'book/title/' + keyword)
