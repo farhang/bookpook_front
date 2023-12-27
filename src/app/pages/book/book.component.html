@@ -1,0 +1,47 @@
+<div class="container mx-auto"  *ngIf="book">
+  <div class="max-w-3xl mx-auto border rounded mt-5">
+    <div class="p-2 border-b">
+      <h1 class="font-serif rtl !mb-0"> دانلود کتاب {{book.Title}} </h1>
+    </div>
+
+    <div class="flex flex-row-reverse">
+      <img class="book-image" mat-card-image src="https://libgen.li/covers/5408000/36eb187b047e4063b8e6e3f6efca6a2f.jpg" alt="{{book.Title}} Cover">
+      <div class="px-4 text-right rtl justify-self-start grow mt-5">
+        <div class="mb-2">
+          <span class="bg-gray-100 text-gray-800 ml-2 text-xs font-medium px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">نویسندگان:</span>
+          <span class="!text-sm font-sans">{{book.Author}}</span>
+        </div>
+        <div class="mb-2">
+          <span class="bg-gray-100 ml-2 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">زبان:</span>
+          <span class="!text-sm font-sans">{{book.Language}}</span>
+        </div>
+        <div class="mb-2">
+          <span class="bg-gray-100 ml-2 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">سال:</span>
+          <span class="!text-sm font-sans">{{book.Year}}</span>
+        </div>
+        <div class="mb-2">
+          <span class="bg-gray-100 ml-2 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">تعداد صفحات:</span>
+          <span class="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-blue-900 dark:text-blue-300">{{book.PagesInFile}}</span>
+
+        </div>
+        <div class="mb-2">
+          <span class="bg-gray-100 ml-2 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">حجم:</span>
+          <span class="bg-indigo-100 text-indigo-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-indigo-900 dark:text-indigo-300">{{book.Filesize}}</span>
+        </div>
+        <div class="mb-2">
+          <span class="bg-gray-100 ml-2 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">فرمت:</span>
+          <span class="bg-green-100 text-green-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-green-900 dark:text-green-300">{{book.Extension}}</span>
+        </div>
+
+        <button (click)="downloadBook(book)" mat-raised-button color="accent" class="w-full mt-4 text-base font-bold !tracking-normal">
+          پرداخت
+          ۱۰۰۰ تومان
+        </button>
+        <button (click)="gotoHome()"  mat-raised-button  class="w-full mt-4 text-base font-bold !tracking-normal">
+         <span class="nline-block mr-2 cur">صفحه اصلی</span><mat-icon>home</mat-icon>
+        </button>
+      </div>
+    <!--  <img class="book-image" mat-card-image src="https://libgen.li/covers/{{book.Coverurl}}" alt="{{book.Title}} Cover">-->
+    </div>
+  </div>
+</div>
