@@ -9,7 +9,6 @@
     "test": "ng test",
     "dev:ssr": "ng run bookpook:serve-ssr",
     "serve:ssr": "node dist/bookpook/server/main.js",
-    "serve:ssr-80": "PORT=80 node dist/bookpook/server/main.js",
     "build:ssr": "ng build && ng run bookpook:server",
     "deploy": "cp -R ./dist/bookpook/* /var/www/bookpook.ir/html",
     "prerender": "ng run bookpook:prerender"
