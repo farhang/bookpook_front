@@ -10,7 +10,6 @@
     "dev:ssr": "ng run bookpook:serve-ssr",
     "serve:ssr": "node dist/bookpook/server/main.js",
     "build:ssr": "ng build && ng run bookpook:server",
-    "deploy": "cp -R ./dist/bookpook/* /var/www/bookpook.ir/html",
     "prerender": "ng run bookpook:prerender"
   },
   "private": true,
