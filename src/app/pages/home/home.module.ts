@@ -9,6 +9,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { HomeRoutingModule } from './home-routing.module';
+import { SearchBoxModule } from '../../@shared/components/search-box/search-box.module';
 
 @NgModule({
   declarations: [
@@ -16,15 +17,13 @@ import { HomeRoutingModule } from './home-routing.module';
   ],
   imports: [
     CommonModule,
-    FormsModule,
-    ReactiveFormsModule,
-    MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
     MatIconModule,
     MatCardModule,
     MatProgressSpinnerModule,
-    HomeRoutingModule
+    HomeRoutingModule,
+    SearchBoxModule
   ],
   exports: [HomeComponent]
 })

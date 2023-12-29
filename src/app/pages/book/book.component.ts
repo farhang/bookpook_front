@@ -43,6 +43,11 @@ export class BookComponent implements OnInit{
     })
   }
 
+  setCoverUrl(url: string): string {
+    let str = url.indexOf('-') != -1 ? url.slice(0, url.indexOf('-')) + url.slice(url.indexOf('-')+ 2) : url;
+    return str;
+  }
+
   downloadFile(data: Blob, book: Book) {
         var file = new Blob([data], { type: book.Extension })
         var fileURL = URL.createObjectURL(file);

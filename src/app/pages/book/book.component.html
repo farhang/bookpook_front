@@ -6,7 +6,7 @@
 
     <div class="flex flex-row-reverse">
 <!--      <img class="book-image" mat-card-image src="https://libgen.li/covers/5408000/36eb187b047e4063b8e6e3f6efca6a2f.jpg" alt="{{book.Title}} Cover">-->
-      <img class="book-image" mat-card-image src="https://libgen.li/covers/{{book.Coverurl}}" alt="{{book.Title}} Cover">
+      <img class="book-image" mat-card-image src="https://libgen.li/covers/{{setCoverUrl(book.Coverurl)}}" alt="{{book.Title}} Cover">
       <div class="px-4 text-right rtl justify-self-start grow mt-5">
         <div class="mb-2">
           <span class="bg-gray-100 text-gray-800 ml-2 text-xs font-medium px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">نویسندگان:</span>
