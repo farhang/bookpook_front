@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { BookComponent } from './pages/book/book.component';
 
 const routes: Routes = [
   {
@@ -10,6 +9,10 @@ const routes: Routes = [
   {
     path: 'book/:md5/:extension',
     loadChildren: () => import('./pages/book/book.module').then(m => m.BookModule)
+  },
+  {
+    path: 'search',
+    loadChildren: () => import('./pages/search/search.module').then(m => m.SearchModule)
   }
 ];
 

@@ -1,0 +1,8 @@
+<form [formGroup]="form" >
+  <mat-form-field class="w-full" appearance="outline">
+    <input matInput formControlName="search"  matInput placeholder="جستجوی کتاب نویسنده ناشر">
+    <button [disabled]="isLoading" class="mr-2" (click)="searchBook()" matSuffix mat-raised-button color="primary">
+      <mat-icon class="!m-0">search</mat-icon>
+    </button>
+  </mat-form-field>
+</form>

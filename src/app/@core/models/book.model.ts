@@ -12,5 +12,6 @@ export interface Book {
   MD5?: string;
   Language?: string;
   PagesInFile?: number;
+  Visible?: string;
   Filesize?: number;
 }
